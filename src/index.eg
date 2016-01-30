@@ -18,9 +18,10 @@ install{@, options} =
    @formatters.html.register-transformers with {
       css = {
          autoprefixer{resource} =
-            resource & {
-               transform = APTransformer{}
-            }
+            if resource.use-autoprefixer or not resource.optimized:
+               resource & {
+                  transform = APTransformer{}
+               }
       }
    }
 

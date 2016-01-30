@@ -27,3 +27,7 @@ resources :: my-style.css
 
 Transformations are also applied to CSS files listed in
 `resources.files` in `quaint.json`.
+
+Transformations will *not* be applied to any resources marked as
+`optimized` unless they also have `use-autoprefixer` set to true.
+
