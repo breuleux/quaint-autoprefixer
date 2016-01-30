@@ -1,0 +1,13 @@
+
+require:
+   inquirer-promise as inq
+   chalk
+
+
+async quaint-setup(config, instructions) =
+   url = "https://github.com/breuleux/quaint-autoprefixer"
+   print 'Plugin documentation: {chalk.bold.cyan(url)}'
+   data = config.plugins["autoprefixer"] or= {=}
+
+
+provide = quaint-setup

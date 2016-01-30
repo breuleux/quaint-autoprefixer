@@ -1,0 +1,33 @@
+
+require:
+   postcss
+   autoprefixer
+   kaiser/reg as kreg
+
+class APTransformer:
+   constructor{@indented-syntax, @variables} =
+      @vcode = [items{@variables} each {k, v} -> '${k}: {v}'].join{";\n"}
+   transform{code, _, _} =
+      postcss{{autoprefixer}}.process{code}.css
+
+kreg.register{APTransformer.prototype} with {
+   type-id = "0c1be36c-c71b-11e5-aced-63e66d2a70a7"
+}
+
+install{@, options} =
+   @formatters.html.register-transformers with {
+      css = {
+         autoprefixer{resource} =
+            resource & {
+               transform = APTransformer{}
+            }
+      }
+   }
+
+main{*match} =
+   {@, options = {=}} when @is-quaint-engine ->
+      install{@, options}
+   {options = {=}} ->
+      {@} -> main{@, options}
+
+provide = main

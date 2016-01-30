@@ -1,0 +1,37 @@
+{
+  "name": "quaint-autoprefixer",
+  "description": "Autoprefixer for Quaint",
+  "version": "0.0.0",
+  "format": "cjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/breuleux/quaint-autoprefixer"
+  },
+  "keywords": [
+    "quaint",
+    "quaint-plugin"
+  ],
+  "author": "Olivier Breuleux",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "autoprefixer": "^6.3.1",
+    "chalk": "^1.1.1",
+    "earlgrey-runtime": ">=0.0.11",
+    "inquirer-promise": ">=0.0.3",
+    "kaiser": "0.0.4",
+    "postcss": "^5.0.14"
+  },
+  "devDependencies": {
+    "earlgrey": ">=0.0.13",
+    "mocha": "^2.2.1",
+    "quaint": ">=0.0.15",
+    "earl-mocha": ">=0.0.3"
+  },
+  "scripts": {
+    "refresh": "earl compile -5vso lib/ src/",
+    "compile": "earl compile -5rvso lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "mocha"
+  }
+}
