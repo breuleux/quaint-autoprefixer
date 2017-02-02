@@ -1,7 +1,7 @@
 {
   "name": "quaint-autoprefixer",
   "description": "Autoprefixer for Quaint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "format": "cjs",
   "repository": {
     "type": "git",
