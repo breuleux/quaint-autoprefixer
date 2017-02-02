@@ -15,12 +15,12 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "dependencies": {
-    "autoprefixer": "^6.3.1",
+    "autoprefixer": "^6.7.2",
     "chalk": "^1.1.1",
     "earlgrey-runtime": ">=0.0.11",
     "inquirer-promise": ">=0.0.3",
     "kaiser": ">=0.0.4",
-    "postcss": "^5.0.14"
+    "postcss": "^5.2.11"
   },
   "devDependencies": {
     "earlgrey": ">=0.0.13",
